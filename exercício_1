@@ -1,0 +1,15 @@
+1. Faça um algoritmo que peça dois números e imprima o maior deles. 
+
+<?php
+
+    print"Digite o número que deseja iniciar:";
+$N1= (int)fgets(STDIN);
+    print"Digite o segundo número:";
+$N2=(int)fgets(STDIN);
+
+    if ($N1>$N2){
+        print"$N1 é maior que $N2";
+    }
+    else {
+        print"$N2 é maior que $N1";
+    }
