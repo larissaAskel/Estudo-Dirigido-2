@@ -1,0 +1,22 @@
+6. Faça um algoritmo que leia três números e mostre o maior deles.
+
+<?php
+
+print"Digite um número: \n";
+$N1=(int) fgets (STDIN);
+
+print"Digite o segundo número: \n";
+$N2=(int) fgets (STDIN);
+
+print"Digite o terçeiro número: \n";
+$N3=(int) fgets (STDIN);
+
+if (($N1>$N2)&&($N1>$N3)){
+    print"O maior numero é $N1";
+}
+elseif(($N2>$N1)&&($N2>$N3)){
+    print"O maior numero é $N2";
+}
+else{
+    print"O maior numero é $N3";
+}
