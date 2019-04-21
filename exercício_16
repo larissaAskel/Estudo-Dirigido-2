@@ -1,0 +1,25 @@
+16. Faça um programa que leia 5 números e informe a soma e a média dos números. 
+
+<?php
+
+<?php
+
+print"Digite um número: \n";
+$N1=(int) fgets (STDIN);
+
+print"Digite o segundo número: \n";
+$N2=(int) fgets (STDIN);
+
+print"Digite o terçeiro número: \n";
+$N3=(int) fgets (STDIN);
+
+print"Digite o quarto número: \n";
+$N4=(int) fgets (STDIN);
+
+print"Digite o quinto número: \n";
+$N5=(int) fgets (STDIN);
+
+$soma=$N5+$N1+$N4+$N3+$N2;
+$media=$soma/5;
+
+print "A média dos 5 números é $media";
