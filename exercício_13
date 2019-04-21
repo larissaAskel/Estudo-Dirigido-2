@@ -1,0 +1,7 @@
+13. Faça um algoritmo que mostre os números de 100 a 1;
+
+<?php
+$N=100;
+for($N=100;$N>=1;$N--){
+    print "$N \n";
+}
