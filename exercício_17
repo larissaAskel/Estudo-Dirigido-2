@@ -1,0 +1,18 @@
+17. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número. Não utilize a função de potência da linguagem. 
+
+<?php
+
+print "Digite um número:";
+$N=(int)fgets(STDIN);
+print "Digite um número:";
+$N2=(int)fgets(STDIN);
+$cont=0;
+print"O primeiro resultado é:";
+print pow($N,$N2);
+print"\nJá o segundo é:";
+
+while ($cont<1){
+    $cont=$cont+1;
+ $N3= pow($N,$N2);
+ print pow($N3,$N);
+}
