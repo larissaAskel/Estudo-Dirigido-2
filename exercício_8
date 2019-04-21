@@ -1,0 +1,22 @@
+8. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.  
+
+<?php
+
+print"Digite o preço do primeiro produto: \n";
+$N1=(int) fgets (STDIN);
+
+print"Digite o preço do segundo produto: \n";
+$N2=(int) fgets (STDIN);
+
+print"Digite o preço do terçeiro produto: \n";
+$N3=(int) fgets (STDIN);
+
+if (($N1<$N2)&&($N1<$N3)){
+    print"O menor preço é do 1* produto que custa $N1";
+}
+elseif(($N2<$N1)&&($N2<$N3)){
+    print"O menor preço é do 2* produto que custa $N2";
+}
+else{
+    print"O menor preço é do 3* produto que custa $N3";
+}
