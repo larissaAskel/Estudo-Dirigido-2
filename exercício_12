@@ -1,0 +1,7 @@
+12. Faça um algoritmo que mostre os números de 1 a 100; 
+
+<?php
+$N=1;
+for($N=1;$N<=100;$N++){
+    print "$N \n";
+}
