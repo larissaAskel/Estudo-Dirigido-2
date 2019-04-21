@@ -1,0 +1,34 @@
+10. Faça um algoritmo que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:  Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve pedir os demais valores, sendo encerrado;  Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;  Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;  Se o delta for positivo, a equação possui duas raízes reais; informe-as ao usuário;  
+
+<?php
+
+print "Digite o valor de (A):";
+$N1=(int)fgets(STDIN);
+
+if ($N1==0){
+    print "Essa não é uma questão do segundo grau.";
+}
+else {
+    print "Digite o valor de (B):";
+    $N2=(int)fgets(STDIN);
+
+    print "Digite o valor de (C):";
+    $N3=(int)fgets(STDIN);
+
+    //$D é delta
+    $D=(pow ($N2,2))-4*$N1*$N3;
+
+
+    if ($D < 0) {
+        print"A equação não possui raizes reais.";
+    } elseif ($D == 0) {
+        $X1 = (((-1) * ($N2)) + (pow($D, 0.5))) / (2 * $N1);
+        print "Só há um resultado $X1";
+    } else {
+        $X1 = (((-1) * ($N2)) + (pow($D, 0.5))) / (2 * $N1);
+        $X2 = (((-1) * ($N2)) - (pow($D, 0.5))) / (2 * $N1);
+
+        print "Os resultados são $X1 e $X2";
+    }
+
+}
