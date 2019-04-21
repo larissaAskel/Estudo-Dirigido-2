@@ -1,0 +1,34 @@
+9. Faça um algoritmo que leia três números e mostre-os em ordem decrescente. 
+
+<?php
+
+print"Digite um número:";
+$N= (int)fgets (STDIN);//1
+print"Digite outro número:";
+$N2= (int)fgets (STDIN);//2
+print"Digite outro número:";
+$N3= (int)fgets (STDIN);//3
+//1,2,3
+if (($N>$N2) && ($N2>$N3)){
+    print"A ordem decrescente é $N, $N2, $N3";
+}
+//3,2,1
+elseif (($N3>$N2) && ($N2>$N)){
+    print"A ordem decrescente é $N3, $N2, $N";
+}
+//2,1,3
+elseif (($N2>$N) && ($N>$N3)){
+    print"A ordem decrescente é $N2, $N, $N3";
+}
+//3,1,2
+elseif (($N3>$N) && ($N>$N2)){
+    print"A ordem decrescente é $N3, $N, $N2";
+}
+//1,3,2
+elseif (($N>$N3) && ($N3>$N2)){
+    print"A ordem decrescente é $N, $N3, $N2";
+}
+//2,3,1
+else {
+    print"A ordem decrescente é $N2, $N3, $N";
+}
