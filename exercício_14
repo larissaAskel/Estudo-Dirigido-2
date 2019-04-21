@@ -1,0 +1,10 @@
+14. Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+
+<?php
+$N=1;
+while ($N<50){
+$N=$N+1;
+if ($N==($N%2!=0)){
+ print "$N \n";
+}
+}
