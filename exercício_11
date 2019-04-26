@@ -2,11 +2,11 @@
 
 <?php
 
-print " Digite um numero:";
+print " Digite um numero menor que 1000:";
 
     $N = (int)fgets(STDIN);
     $H = $N;
-
+if($N<1000){
     if ($N >= 100) {
 
         $J = $N / 100;
@@ -93,3 +93,7 @@ print " Digite um numero:";
             print"$H= $N unidade";
         }
     }
+}
+else{
+    Print "O valor digitado é maior do que 1000";
+}
