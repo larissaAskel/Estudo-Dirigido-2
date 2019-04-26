@@ -1,0 +1,95 @@
+11. Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo, observando os termos no plural a colocação do "e", da vírgula entre outros. Exemplo:  326 = 3 centenas, 2 dezenas e 6 unidades  12 = 1 dezena e 2 unidades 
+
+<?php
+
+print " Digite um numero:";
+
+    $N = (int)fgets(STDIN);
+    $H = $N;
+
+    if ($N >= 100) {
+
+        $J = $N / 100;
+        $J = round($J);
+        $N = $N - 100 * $J;
+
+        if ($N >= 10) {
+            $P = $N / 10;
+            $P = round($P);
+            $N = $N - 10 * $P;
+            if ($N == 0) {
+                if (($J > 1) && ($P > 1))
+                    print"$H = $J centenas e $P dezenas";
+                elseif (($J > 1) && ($P == 1))
+                    print"$H = $J centenas e $P dezena";
+                elseif (($J == 1) && ($P > 1))
+                    print"$H = $J centena e $P dezenas";
+                else {
+                    print"$H = $J centena e $P dezena";
+                }
+            } else {
+                if (($J > 1) && ($P > 1) && ($N > 1))
+                    print"$H = $J centenas, $P dezenas e $N unidades";
+                elseif (($J > 1) && ($P == 1) && ($N > 1))
+                    print"$H = $J centenas,$P dezena e $N unidades";
+                elseif (($J > 1) && ($P > 1) && ($N == 1))
+                    print"$H = $J centenas,$P dezenas e $N unidade";
+                elseif (($J == 1) && ($P > 1) && ($N > 1))
+                    print"$H = $J centena,$P dezenas e $N unidades";
+                elseif (($J == 1) && ($P > 1) && ($N == 1))
+                    print"$H = $J centena,$P dezenas e $N unidade";
+                elseif (($J == 1) && ($P == 1) && ($N > 1))
+                    print"$H = $J centena,$P dezena e $N unidades";
+                else {
+                    print"$H = $J centena, $P dezena e $N unidade";
+                }
+            }
+        } else {
+            if ($N == 0) {
+                if ($J > 1) {
+                    print"$H = $J centenas";
+                } else {
+                    print"$H = $J centena";
+                }
+            } else {
+                if (($J > 1) && ($N > 1)) {
+                    print"$H = $J centenas e $N unidades";
+                } elseif (($J == 1) && ($N == 1)) {
+                    print"$H = $J centena e $N unidade";
+                } elseif (($J > 1) && ($N == 1)) {
+                    print"$H = $J centenas e $N unidade";
+                } else {
+                    print"$H = $J centena e $N unidades";
+                }
+            }
+        }
+
+    } elseif (($N < 100) && ($N >= 10)) {
+
+        $P = $N / 10;
+        $P = round($P);
+        $N = $N - 10 * $P;
+
+        if ($N == 0) if ($P > 1) {
+            print"$H = $P dezenas";
+        } else {
+            print"$H = $P dezena";
+        } else {
+            if (($P > 1) && ($N > 1)) {
+                print"$H = $P dezenas e $N unidades";
+            } elseif (($P == 1) && ($N == 1)) {
+                print"$H = $P dezena e $N unidade";
+            } elseif (($P > 1) && ($N == 1)) {
+                print"$H = $P dezenas e $N unidade";
+            } else {
+                print"$H = $P dezena e $N unidades";
+            }
+        }
+
+    } else {
+        if ($N > 1) {
+            print"$H= $N unidades";
+        } else {
+            print"$H= $N unidade";
+        }
+    }
